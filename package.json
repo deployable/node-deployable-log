@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha",
     "test:debug": "DEBUG='*' mocha debug",
-    "npm:publish": "npm test && [ -z \"$(git status --porcelain)\" ] && git push && npm version patch && npm publish && git push --tag",
-    "npm:pubtest": "npm test && npm version prerelease && npm publish --tag testing"
+    "npm:publish": "set -uex; npm test; [ -z \"$(git status --porcelain)\" ]; git push; npm version patch; npm publish; git push --tag",
+    "npm:pubtest": "npm test; npm version prerelease; npm publish --tag testing"
   },
   "repository": {
     "type": "git",
