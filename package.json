@@ -29,16 +29,10 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "bluebird": "^3.0.1",
-    "bole": "^3.0.2",
     "debug": "^2",
-    "deployable-ringbuffer": "^0.1.2",
-    "express-pino-logger": "^2.0.0",
-    "express-winston": "^2.1.2",
-    "mixwith": "~0.1.1",
-    "pino": "^3.1.2",
-    "pino-debug": "^1.0.1",
-    "winston": "^2.3.0",
-    "winston-circular-buffer": "^1.0.0"
+    "deployable-ringbuffer": "~0.1.2",
+    "express-pino-logger": "~2.0.0",
+    "pino": "~3.1.2",
+    "pino-debug": "~1.0.1"
   }
 }
