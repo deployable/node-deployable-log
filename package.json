@@ -1,0 +1,44 @@
+{
+  "name": "deployable-log",
+  "version": "0.1.1-0",
+  "description": "Deployable Logging",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "test:debug": "DEBUG='*' mocha debug",
+    "npm:publish": "npm test && [ -z \"$(git status --porcelain)\" ] && git push && npm version patch && npm publish && git push --tag",
+    "npm:pubtest": "npm test && npm version prerelease && npm publish --tag testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deployable/node-deployable-log.git"
+  },
+  "keywords": [
+    "deployable",
+    "module"
+  ],
+  "author": "Matt Hoyle <code at deployable.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deployable/node-deployable-log/issues"
+  },
+  "homepage": "https://github.com/deployable/deployable-log#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "bluebird": "^3.0.1",
+    "bole": "^3.0.2",
+    "debug": "^2",
+    "deployable-ringbuffer": "^0.1.2",
+    "express-pino-logger": "^2.0.0",
+    "express-winston": "^2.1.2",
+    "mixwith": "~0.1.1",
+    "pino": "^3.1.2",
+    "pino-debug": "^1.0.1",
+    "winston": "^2.3.0",
+    "winston-circular-buffer": "^1.0.0"
+  }
+}
