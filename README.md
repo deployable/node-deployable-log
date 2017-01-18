@@ -12,15 +12,16 @@ Deployable Logging
 
 ```javascript
 
-const deployable-log = require('deployable-log')
-deployable-log.demo()
+const { logger, debug } = require('deployable-log').fetch('dply:tag')
+logger.info('testing')
+debug('testing') // Requires `DEBUG` to be set in the environment
 
 ```
 
 ### License
 
 deployable-log is released under the MIT license.
-Copyright 2016 Matt Hoyle <code at deployable.co>
+Copyright 2016 Matt Hoyle - Deployable Ltd
 
 https://github.com/deployable/deployable-log
 

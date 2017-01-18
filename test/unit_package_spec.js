@@ -1,4 +1,4 @@
-const {Log, Logger} = require('../')
+const Log = require('../')
 const expect = require('chai').expect
 
 describe('Unit::Deployable::log::package', function(){
