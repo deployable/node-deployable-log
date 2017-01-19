@@ -1,12 +1,12 @@
 {
   "name": "deployable-log",
-  "version": "0.2.1",
+  "version": "0.3.0-0",
   "description": "Deployable Logging",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
     "test:debug": "DEBUG='*' mocha debug",
-    "npm:publish": "set -uex; npm test; [ -z \"$(git status --porcelain)\" ]; git push; npm version patch; npm publish; git push --tag",
+    "npm:publish": "set -uex; rm -rf node_modules; yarn; npm test; [ -z \"$(git status --porcelain)\" ]; git push; npm version patch; npm publish; git push --tag",
     "npm:pubtest": "npm test; npm version prerelease; npm publish --tag testing"
   },
   "repository": {
@@ -26,11 +26,12 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
+    "pino-multi-stream": "^2.0.1",
     "sinon": "^1.17.6"
   },
   "dependencies": {
     "debug": "^2",
-    "deployable-ringbuffer": "~0.1.2",
+    "deployable-ringbuffer": "^0.2.0",
     "express-pino-logger": "~2.0.0",
     "pino": "~3.1.2",
     "pino-debug": "~1.0.1"
