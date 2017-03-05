@@ -49,6 +49,7 @@ describe('Unit::Deployable::log::log', function(){
       expect( logdata.level ).to.equal( 10 )
     })
 
+    // This needs the horrible stdout/stderr capture trick
     it('should log to stderr still under TEST', function(){
       let me = Log.fetch('me')
       me.logger.error('testa error')
