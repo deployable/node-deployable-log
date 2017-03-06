@@ -1,13 +1,13 @@
 {
-  "name": "deployable-log",
-  "version": "0.3.0",
+  "name": "@deployable/log",
+  "version": "0.3.0-0",
   "description": "Deployable Logging",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha",
     "test:debug": "DEBUG='*' mocha debug",
-    "npm:publish": "set -uex; rm -rf node_modules; yarn; npm test; [ -z \"$(git status --porcelain)\" ]; git push; npm version patch; npm publish; git push; git push --tag",
-    "npm:pubtest": "npm test; npm version prerelease; npm publish --tag testing"
+    "release:patch": "set -uex; rm -rf node_modules; yarn; yarn test; git push; npm version patch; npm publish --access public; git push; git push --tag",
+    "release:test": "set -uex; npm test; npm version prerelease; npm publish --tag testing --access public"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/deployable/node-deployable-log/issues"
   },
-  "homepage": "https://github.com/deployable/deployable-log#readme",
+  "homepage": "https://github.com/deployable/node-deployable-log#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2",

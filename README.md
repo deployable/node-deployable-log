@@ -1,18 +1,18 @@
-# [deployable-log](https://github.com/deployable/deployable-log)
+# [@deployable/log](https://github.com/deployable/node-deployable-log)
 
 Deployable Logging
 
 ### Install
  
-    npm install deployable-log --save
+    npm install @deployable/log --save
 
-    yarn add deployable-log
+    yarn add @deployable/log
 
 ### Usage
 
 ```javascript
 
-const { logger, debug } = require('deployable-log').fetch('dply:tag')
+const { logger, debug } = require('@deployable/log').fetch('dply:tag')
 logger.info('testing')
 debug('testing') // Requires `DEBUG` to be set in the environment
 
@@ -23,5 +23,5 @@ debug('testing') // Requires `DEBUG` to be set in the environment
 deployable-log is released under the MIT license.
 Copyright 2016 Matt Hoyle - Deployable Ltd
 
-https://github.com/deployable/deployable-log
+https://github.com/deployable/node-deployable-log
 
