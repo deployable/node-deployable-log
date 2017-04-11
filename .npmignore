@@ -1,7 +1,13 @@
+.editorconfig
+.eslintrc.yaml
+
+yarn.lock
 node_modules/
 npm-debug*.log
 yarn-error.log
+
+coverage/
 test/output
 pkg/
 tmp/
-coverage/
+
