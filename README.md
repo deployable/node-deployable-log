@@ -1,6 +1,6 @@
 # [@deployable/log](https://github.com/deployable/node-deployable-log)
 
-Deployable Logging
+Deployable Logging, [pino](https://github.com/pinojs/pino) and [debug](https://github.com/visionmedia/debug).
 
 ### Install
  
