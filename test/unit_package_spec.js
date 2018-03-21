@@ -9,8 +9,12 @@ describe('Unit::Deployable::log::package', function(){
       expect( Log.name ).to.equal( 'Log' )
     })
 
-    it('should have an init function', function(){
-      expect( Log.init ).to.be.a('function')
+    it('should have pino attached', function(){
+      expect( Log.pino ).to.be.a('function')
+    })
+
+    it('should have debug attached', function(){
+      expect( Log.debug ).to.be.a('function')
     })
 
   })

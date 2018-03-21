@@ -11,7 +11,7 @@ describe('Unit::Deployable::log::log', function(){
     })
 
     it('should have an init function', function(){
-      expect( Log.init ).to.be.a('function')
+      expect( Log._classInit ).to.be.a('function')
     })
 
     it('should have a default pino instance', function(){
